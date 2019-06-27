@@ -57,8 +57,6 @@
 		063FA2941812D61A004FBA94 /* HBTestExecutionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 063452C61811DAC3003C0B7C /* HBTestExecutionContext.m */; };
 		063FE3F918EDA51B002F6738 /* HBEscapedString.h in Headers */ = {isa = PBXBuildFile; fileRef = 063FE3F718EDA51B002F6738 /* HBEscapedString.h */; };
 		063FE3FA18EDA51B002F6738 /* HBEscapedString.h in Headers */ = {isa = PBXBuildFile; fileRef = 063FE3F718EDA51B002F6738 /* HBEscapedString.h */; };
-		063FE3FB18EDA51B002F6738 /* HBEscapedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 063FE3F818EDA51B002F6738 /* HBEscapedString.m */; };
-		063FE3FC18EDA51B002F6738 /* HBEscapedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 063FE3F818EDA51B002F6738 /* HBEscapedString.m */; };
 		063FE3FE18EDB430002F6738 /* HBEscapedString_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 063FE3FD18EDB430002F6738 /* HBEscapedString_Private.h */; };
 		063FE3FF18EDB430002F6738 /* HBEscapedString_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 063FE3FD18EDB430002F6738 /* HBEscapedString_Private.h */; };
 		06556D7F17FEFB0C00070907 /* HBPartial.h in Headers */ = {isa = PBXBuildFile; fileRef = 06556D7D17FEFB0C00070907 /* HBPartial.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -189,6 +187,8 @@
 		06F493BB1802D75E0055B5BC /* HBTestBuiltinBlockHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E478F317FAC84D0029C3D1 /* HBTestBuiltinBlockHelpers.m */; };
 		06F601FE1812D0CD0019D9C1 /* HBExecutionContextDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 06F601FD1812D0CD0019D9C1 /* HBExecutionContextDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		06F601FF1812D0CD0019D9C1 /* HBExecutionContextDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 06F601FD1812D0CD0019D9C1 /* HBExecutionContextDelegate.h */; };
+		F085E62E22C4C7E7000BC731 /* HBEscapedString.m in Sources */ = {isa = PBXBuildFile; fileRef = F085E62D22C4C7E7000BC731 /* HBEscapedString.m */; };
+		F085E62F22C4C7F4000BC731 /* HBEscapedString.m in Sources */ = {isa = PBXBuildFile; fileRef = F085E62D22C4C7E7000BC731 /* HBEscapedString.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -263,8 +263,7 @@
 		0638A5C818D837130090D490 /* HBTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBTestCase.h; sourceTree = "<group>"; };
 		0638A5C918D837130090D490 /* HBTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBTestCase.m; sourceTree = "<group>"; };
 		063FE3F618E420DA002F6738 /* travis-tests.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "travis-tests.sh"; sourceTree = "<group>"; };
-		063FE3F718EDA51B002F6738 /* HBEscapedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBEscapedString.h; path = "handlebars-objc/helpers/HBEscapedString.h"; sourceTree = SOURCE_ROOT; };
-		063FE3F818EDA51B002F6738 /* HBEscapedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBEscapedString.m; path = "handlebars-objc/helpers/HBEscapedString.m"; sourceTree = SOURCE_ROOT; };
+		063FE3F718EDA51B002F6738 /* HBEscapedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBEscapedString.h; sourceTree = "<group>"; };
 		063FE3FD18EDB430002F6738 /* HBEscapedString_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBEscapedString_Private.h; sourceTree = "<group>"; };
 		06556D7D17FEFB0C00070907 /* HBPartial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBPartial.h; sourceTree = "<group>"; };
 		06556D7E17FEFB0C00070907 /* HBPartial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBPartial.m; sourceTree = "<group>"; };
@@ -352,6 +351,7 @@
 		06F4934F1802D07F0055B5BC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		06F493B51802D59F0055B5BC /* handlebars-objc-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "handlebars-objc-ios-Prefix.pch"; sourceTree = "<group>"; };
 		06F601FD1812D0CD0019D9C1 /* HBExecutionContextDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBExecutionContextDelegate.h; sourceTree = "<group>"; };
+		F085E62D22C4C7E7000BC731 /* HBEscapedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBEscapedString.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -468,7 +468,8 @@
 				06556D8817FF177700070907 /* runtime */,
 				0630B19217F2EF9100EA7018 /* Supporting Files */,
 			);
-			path = "handlebars-objc";
+			name = "handlebars-objc";
+			path = "src/handlebars-objc";
 			sourceTree = "<group>";
 		};
 		0630B19217F2EF9100EA7018 /* Supporting Files */ = {
@@ -502,7 +503,8 @@
 				06279A0418DF9A5300DB552E /* HBTestWhitespaceControl.m */,
 				0630B1A717F2EF9100EA7018 /* Supporting Files */,
 			);
-			path = "handlebars-objcTests";
+			name = "handlebars-objcTests";
+			path = "src/handlebars-objcTests";
 			sourceTree = "<group>";
 		};
 		0630B1A717F2EF9100EA7018 /* Supporting Files */ = {
@@ -594,8 +596,7 @@
 				06F3BEE0180FD4C200D4447B /* ContextObjects.md */,
 				06AB0B0F180BDA29005A7610 /* WritingHelpers.md */,
 			);
-			name = doc;
-			path = ../doc;
+			path = doc;
 			sourceTree = "<group>";
 		};
 		06798D6617F9B1F800FC40D7 /* context */ = {
@@ -654,7 +655,8 @@
 				06F3BEE3180FD50800D4447B /* generate_github_pages.sh */,
 				063FE3F618E420DA002F6738 /* travis-tests.sh */,
 			);
-			path = utils;
+			name = utils;
+			path = src/utils;
 			sourceTree = "<group>";
 		};
 		06D426BA17FC5DDD00C41476 /* helpers */ = {
@@ -662,7 +664,7 @@
 			children = (
 				063FE3F718EDA51B002F6738 /* HBEscapedString.h */,
 				063FE3FD18EDB430002F6738 /* HBEscapedString_Private.h */,
-				063FE3F818EDA51B002F6738 /* HBEscapedString.m */,
+				F085E62D22C4C7E7000BC731 /* HBEscapedString.m */,
 				06D426BB17FC5E4200C41476 /* HBHelper.h */,
 				06D426BC17FC5E4200C41476 /* HBHelper.m */,
 				0698F02317FEC78A005203F6 /* HBHelperCallingInfo.h */,
@@ -855,6 +857,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 0630B17E17F2EF9100EA7018;
@@ -908,7 +911,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"Copying headers where XCode will find them\"\n\nS_DST_ROOT=\"$TEMP_ROOT/Headers/HBHandlebars\"\nmkdir -p \"$S_DST_ROOT\"\n\n\"$SOURCE_ROOT/utils/copy_public_headers.sh\" \"$S_DST_ROOT\"\n";
+			shellScript = "echo \"Copying headers where XCode will find them\"\n\nS_DST_ROOT=\"$TEMP_ROOT/Headers/HBHandlebars\"\nmkdir -p \"$S_DST_ROOT\"\n\n\"$SOURCE_ROOT/src/utils/copy_public_headers.sh\" \"$S_DST_ROOT\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -919,7 +922,7 @@
 			files = (
 				06556D9117FF177700070907 /* HBTemplate.m in Sources */,
 				06798D6A17F9B22D00FC40D7 /* HBContextState.m in Sources */,
-				063FE3FB18EDA51B002F6738 /* HBEscapedString.m in Sources */,
+				F085E62E22C4C7E7000BC731 /* HBEscapedString.m in Sources */,
 				06A81A9817F86ECE0006F16A /* HBAstVisitor.m in Sources */,
 				06798D6517F9A12A00FC40D7 /* HBAstEvaluationVisitor.m in Sources */,
 				0630B1DA17F466B800EA7018 /* HBParser.m in Sources */,
@@ -987,7 +990,7 @@
 			files = (
 				06F493791802D1500055B5BC /* HBHelperCallingInfo.m in Sources */,
 				06F493751802D1500055B5BC /* HBContextState.m in Sources */,
-				063FE3FC18EDA51B002F6738 /* HBEscapedString.m in Sources */,
+				F085E62F22C4C7F4000BC731 /* HBEscapedString.m in Sources */,
 				06F4937A1802D1500055B5BC /* HBHelperRegistry.m in Sources */,
 				06F493771802D1500055B5BC /* HBDataContext.m in Sources */,
 				06F4937C1802D1500055B5BC /* handlebars-objc.lm in Sources */,
@@ -1161,8 +1164,8 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "handlebars-objc/handlebars-objc-Prefix.pch";
-				INFOPLIST_FILE = "handlebars-objc/handlebars-objc-Info.plist";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/src/handlebars-objc/handlebars-objc-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/src/handlebars-objc/handlebars-objc-Info.plist";
 				PRODUCT_NAME = HBHandlebars;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -1176,8 +1179,8 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "handlebars-objc/handlebars-objc-Prefix.pch";
-				INFOPLIST_FILE = "handlebars-objc/handlebars-objc-Info.plist";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/src/handlebars-objc/handlebars-objc-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/src/handlebars-objc/handlebars-objc-Info.plist";
 				PRODUCT_NAME = HBHandlebars;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -1193,12 +1196,12 @@
 					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "handlebars-objc/handlebars-objc-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/src/handlebars-objc/handlebars-objc-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "handlebars-objcTests/handlebars-objcTests-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/src/handlebars-objcTests/handlebars-objcTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -1215,8 +1218,8 @@
 					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "handlebars-objc/handlebars-objc-Prefix.pch";
-				INFOPLIST_FILE = "handlebars-objcTests/handlebars-objcTests-Info.plist";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/src/handlebars-objc/handlebars-objc-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/src/handlebars-objcTests/handlebars-objcTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -1231,7 +1234,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/handlebars_objc_ios.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "handlebars-objc/handlebars-objc-ios-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/src/handlebars-objc/handlebars-objc-ios-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1253,7 +1256,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/handlebars_objc_ios.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "handlebars-objc/handlebars-objc-ios-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/src/handlebars-objc/handlebars-objc-ios-Prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
@@ -1276,12 +1279,12 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "handlebars-objc/handlebars-objc-ios-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/src/handlebars-objc/handlebars-objc-ios-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "handlebars-objcTests/handlebars-objc-iosTests-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/src/handlebars-objcTests/handlebars-objc-iosTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1301,8 +1304,8 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "handlebars-objc/handlebars-objc-ios-Prefix.pch";
-				INFOPLIST_FILE = "handlebars-objcTests/handlebars-objc-iosTests-Info.plist";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/src/handlebars-objc/handlebars-objc-ios-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/src/handlebars-objcTests/handlebars-objc-iosTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
