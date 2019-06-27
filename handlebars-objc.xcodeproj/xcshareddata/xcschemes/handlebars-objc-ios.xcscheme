@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0500"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "06F4933D1802D07F0055B5BC"
-               BuildableName = "libHBHandlebars.a"
+               BlueprintIdentifier = "F085E63522C51A8C000BC731"
+               BuildableName = "HBHandlebars.framework"
                BlueprintName = "handlebars-objc-ios"
                ReferencedContainer = "container:handlebars-objc.xcodeproj">
             </BuildableReference>
@@ -39,6 +39,15 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "F085E63522C51A8C000BC731"
+            BuildableName = "HBHandlebars.framework"
+            BlueprintName = "handlebars-objc-ios"
+            ReferencedContainer = "container:handlebars-objc.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -55,8 +64,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "06F4933D1802D07F0055B5BC"
-            BuildableName = "libHBHandlebars.a"
+            BlueprintIdentifier = "F085E63522C51A8C000BC731"
+            BuildableName = "HBHandlebars.framework"
             BlueprintName = "handlebars-objc-ios"
             ReferencedContainer = "container:handlebars-objc.xcodeproj">
          </BuildableReference>
@@ -70,6 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "F085E63522C51A8C000BC731"
+            BuildableName = "HBHandlebars.framework"
+            BlueprintName = "handlebars-objc-ios"
+            ReferencedContainer = "container:handlebars-objc.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
