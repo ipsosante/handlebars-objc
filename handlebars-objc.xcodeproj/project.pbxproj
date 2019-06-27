@@ -130,7 +130,7 @@
 		06E478F617FAC87A0029C3D1 /* HBTestSimpleBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E478F517FAC87A0029C3D1 /* HBTestSimpleBlocks.m */; };
 		06E4790A17FC0CA90029C3D1 /* HBDataContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 06E4790817FC0CA90029C3D1 /* HBDataContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		06E4790B17FC0CA90029C3D1 /* HBDataContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E4790917FC0CA90029C3D1 /* HBDataContext.m */; };
-		06E89C061802E24900A6F461 /* libhandlebars-objc-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F4933E1802D07F0055B5BC /* libhandlebars-objc-ios.a */; };
+		06E89C061802E24900A6F461 /* libHBHandlebars.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F4933E1802D07F0055B5BC /* libHBHandlebars.a */; };
 		06F40AA2185F5E4300EC3463 /* HBTestExtraHelpersLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F40AA1185F5E4300EC3463 /* HBTestExtraHelpersLibrary.m */; };
 		06F40AA3185F5E4300EC3463 /* HBTestExtraHelpersLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F40AA1185F5E4300EC3463 /* HBTestExtraHelpersLibrary.m */; };
 		06F493401802D07F0055B5BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F4933F1802D07F0055B5BC /* Foundation.framework */; };
@@ -345,7 +345,7 @@
 		06F3BEE2180FD50800D4447B /* build_binary_distribution.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build_binary_distribution.sh; sourceTree = "<group>"; };
 		06F3BEE3180FD50800D4447B /* generate_github_pages.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generate_github_pages.sh; sourceTree = "<group>"; };
 		06F40AA1185F5E4300EC3463 /* HBTestExtraHelpersLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBTestExtraHelpersLibrary.m; sourceTree = "<group>"; };
-		06F4933E1802D07F0055B5BC /* libhandlebars-objc-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libhandlebars-objc-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		06F4933E1802D07F0055B5BC /* libHBHandlebars.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHBHandlebars.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F4933F1802D07F0055B5BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		06F4934C1802D07F0055B5BC /* handlebars-objc-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "handlebars-objc-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F4934F1802D07F0055B5BC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -386,7 +386,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06E89C061802E24900A6F461 /* libhandlebars-objc-ios.a in Frameworks */,
+				06E89C061802E24900A6F461 /* libHBHandlebars.a in Frameworks */,
 				06F4934D1802D07F0055B5BC /* XCTest.framework in Frameworks */,
 				06F493501802D07F0055B5BC /* UIKit.framework in Frameworks */,
 				06F4934E1802D07F0055B5BC /* Foundation.framework in Frameworks */,
@@ -411,8 +411,8 @@
 			children = (
 				06C5F6F6180C722200AD9210 /* README.md */,
 				06798D5F17F9A06900FC40D7 /* doc */,
-				0630B19117F2EF9100EA7018 /* handlebars-objc */,
-				0630B1A617F2EF9100EA7018 /* handlebars-objcTests */,
+				0630B19117F2EF9100EA7018 /* Sources */,
+				0630B1A617F2EF9100EA7018 /* Tests */,
 				0630B18A17F2EF9100EA7018 /* Frameworks */,
 				0630B18917F2EF9100EA7018 /* Products */,
 				06AB0B10180BDA48005A7610 /* utils */,
@@ -424,7 +424,7 @@
 			children = (
 				0630B18817F2EF9100EA7018 /* HBHandlebars.framework */,
 				0630B19F17F2EF9100EA7018 /* handlebars-objc-osx-tests.xctest */,
-				06F4933E1802D07F0055B5BC /* libhandlebars-objc-ios.a */,
+				06F4933E1802D07F0055B5BC /* libHBHandlebars.a */,
 				06F4934C1802D07F0055B5BC /* handlebars-objc-iosTests.xctest */,
 			);
 			name = Products;
@@ -453,7 +453,7 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		0630B19117F2EF9100EA7018 /* handlebars-objc */ = {
+		0630B19117F2EF9100EA7018 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				06556D9317FF178300070907 /* HBHandlebars.h */,
@@ -468,8 +468,7 @@
 				06556D8817FF177700070907 /* runtime */,
 				0630B19217F2EF9100EA7018 /* Supporting Files */,
 			);
-			name = "handlebars-objc";
-			path = "src/handlebars-objc";
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		0630B19217F2EF9100EA7018 /* Supporting Files */ = {
@@ -483,7 +482,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0630B1A617F2EF9100EA7018 /* handlebars-objcTests */ = {
+		0630B1A617F2EF9100EA7018 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				0638A5C818D837130090D490 /* HBTestCase.h */,
@@ -503,8 +502,7 @@
 				06279A0418DF9A5300DB552E /* HBTestWhitespaceControl.m */,
 				0630B1A717F2EF9100EA7018 /* Supporting Files */,
 			);
-			name = "handlebars-objcTests";
-			path = "src/handlebars-objcTests";
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		0630B1A717F2EF9100EA7018 /* Supporting Files */ = {
@@ -655,8 +653,7 @@
 				06F3BEE3180FD50800D4447B /* generate_github_pages.sh */,
 				063FE3F618E420DA002F6738 /* travis-tests.sh */,
 			);
-			name = utils;
-			path = src/utils;
+			path = utils;
 			sourceTree = "<group>";
 		};
 		06D426BA17FC5DDD00C41476 /* helpers */ = {
@@ -806,7 +803,7 @@
 				06F4933B1802D07F0055B5BC /* Frameworks */,
 				06F4933C1802D07F0055B5BC /* CopyFiles */,
 				06F493831802D1640055B5BC /* Headers */,
-				067A65FD18040AEA008A3B8E /* ShellScript */,
+				067A65FD18040AEA008A3B8E /* Copy headers */,
 			);
 			buildRules = (
 			);
@@ -814,7 +811,7 @@
 			);
 			name = "handlebars-objc-ios";
 			productName = "handlebars-objc-ios";
-			productReference = 06F4933E1802D07F0055B5BC /* libhandlebars-objc-ios.a */;
+			productReference = 06F4933E1802D07F0055B5BC /* libHBHandlebars.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		06F4934B1802D07F0055B5BC /* handlebars-objc-iosTests */ = {
@@ -900,18 +897,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		067A65FD18040AEA008A3B8E /* ShellScript */ = {
+		067A65FD18040AEA008A3B8E /* Copy headers */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Copy headers";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"Copying headers where XCode will find them\"\n\nS_DST_ROOT=\"$TEMP_ROOT/Headers/HBHandlebars\"\nmkdir -p \"$S_DST_ROOT\"\n\n\"$SOURCE_ROOT/src/utils/copy_public_headers.sh\" \"$S_DST_ROOT\"\n";
+			shellScript = "echo \"Copying headers where XCode will find them\"\n\nS_DST_ROOT=\"$TEMP_ROOT/Headers/HBHandlebars\"\nmkdir -p \"$S_DST_ROOT\"\n\n\"$SRCROOT/utils/copy_public_headers.sh\" \"$S_DST_ROOT\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1107,6 +1106,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1144,6 +1144,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREFIX_HEADER = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1164,8 +1165,9 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/src/handlebars-objc/handlebars-objc-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/src/handlebars-objc/handlebars-objc-Info.plist";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Sources/handlebars-objc-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/handlebars-objc-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = HBHandlebars;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -1179,8 +1181,9 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/src/handlebars-objc/handlebars-objc-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/src/handlebars-objc/handlebars-objc-Info.plist";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Sources/handlebars-objc-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/handlebars-objc-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = HBHandlebars;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -1196,12 +1199,13 @@
 					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/src/handlebars-objc/handlebars-objc-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Sources/handlebars-objc-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/src/handlebars-objcTests/handlebars-objcTests-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/handlebars-objcTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -1218,8 +1222,9 @@
 					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/src/handlebars-objc/handlebars-objc-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/src/handlebars-objcTests/handlebars-objcTests-Info.plist";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Sources/handlebars-objc-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/handlebars-objcTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -1233,18 +1238,23 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/handlebars_objc_ios.dst;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/src/handlebars-objc/handlebars-objc-ios-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Sources/handlebars-objc-ios-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/handlebars-objc-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HBHandlebars;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
 		};
@@ -1255,15 +1265,20 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/handlebars_objc_ios.dst;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/src/handlebars-objc/handlebars-objc-ios-Prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Sources/handlebars-objc-ios-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/handlebars-objc-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HBHandlebars;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
 		};
@@ -1273,19 +1288,14 @@
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/src/handlebars-objc/handlebars-objc-ios-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Sources/handlebars-objc-ios-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/src/handlebars-objcTests/handlebars-objc-iosTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/handlebars-objc-iosTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = xctest;
@@ -1298,15 +1308,10 @@
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/src/handlebars-objc/handlebars-objc-ios-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/src/handlebars-objcTests/handlebars-objc-iosTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Sources/handlebars-objc-ios-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/handlebars-objc-iosTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

@@ -27,4 +27,4 @@ brew upgrade xctool || echo "xctool upgrade failed"
 xctool --version
 
 # now launch the actual tests
-xctool -project "$ROOT_DIR/src/handlebars-objc.xcodeproj" -scheme handlebars-objc-ios  -sdk iphonesimulator -destination name=iPad build test
+xctool -project "handlebars-objc.xcodeproj" -scheme handlebars-objc-ios  -sdk iphonesimulator -destination name=iPad build test
