@@ -63,14 +63,14 @@ NSString* HBPartialNameKey = @"HBPartialNameKey";
 - (NSInteger) lineNumber
 {
     NSNumber* lineNumberObject = [self.userInfo objectForKey:HBLineNumberKey];
-    if (!lineNumberObject || ![lineNumberObject isKindOfClass:[NSNumber class]]) return -1;
+    if (lineNumberObject == nil || ![lineNumberObject isKindOfClass:[NSNumber class]]) return -1;
     return [lineNumberObject integerValue];
 }
 
 - (NSInteger) positionInBuffer
 {
     NSNumber* positionInBufferObject = [self.userInfo objectForKey:HBPositionInBufferKey];
-    if (!positionInBufferObject || ![positionInBufferObject isKindOfClass:[NSNumber class]]) return -1;
+    if (positionInBufferObject == nil || ![positionInBufferObject isKindOfClass:[NSNumber class]]) return -1;
     return [positionInBufferObject integerValue];
 }
 

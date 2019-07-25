@@ -149,18 +149,18 @@ int hb_parse(void* scanner, HBAstProgram** root, NSError** error);
 
 id astFromString(NSString* text, NSError** error)
 {
-    NSData* utf8StringBuffer = [text dataUsingEncoding:NSUTF8StringEncoding];
-    
-    HBAstProgram* root;
-    void* scanner;
-    
+    HBAstProgram* root = nil;
+    void* scanner = nil;
+
+#ifndef __clang_analyzer__
     hb_lex_init (&scanner);
-    YY_BUFFER_STATE buffer = yy_scan_bytes([utf8StringBuffer bytes], [utf8StringBuffer length], scanner);
+    YY_BUFFER_STATE buffer = yy_scan_string([text cStringUsingEncoding:NSUTF8StringEncoding], scanner);
 
     hb_parse(scanner, &root, error);
 
     yy_delete_buffer(buffer, scanner);
     hb_lex_destroy (scanner);
-    
+#endif
+
     return root;
 }
